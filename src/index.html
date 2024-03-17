@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/3a14b5ad60.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="./main.ts" type="module"></script>
+  <title>Dummy Webshop</title>
+</head>
+<body>
+  <header>
+    <a href="./">
+      <h1>Dummy Webshop</h1>
+    </a>
+
+      <nav id="categoryBoxes">
+        <div class="categoryBox">    
+          <h4>Tech</h4>
+          <ul id="categoryMenu">
+            <li><a href="#" id="smartphones">Smartphones</a></li>
+            <li><a href="#" id="laptops">Laptops</a></li>
+          </ul>
+        </div>
+        <div class="categoryBox">
+          <h4>Skincare</h4>
+          <ul id="categoryMenu">
+            <li><a href="#" id="skincare">Skincare</a></li>
+            <li><a href="#" id="fragrances">Fragrances</a></li>
+          </ul>
+        </div>
+        <!-- <div class="categoryBox">
+          <h3>Groceries</h3>
+          <ul id="categoryMenu">
+            <li><a href="#" id="groceries">Groceries</a></li>
+          </ul>
+        </div> -->
+        <div class="categoryBox">
+          <h4>Home</h4>
+          <ul id="categoryMenu">
+            <li><a href="#" id="home-decoration">Home decoration</a></li>
+            <li><a href="#" id="furniture">Furniture</a></li>
+            <li><a href="#" id="lighting">Lighting</a></li>
+            <li><a href="#" id="groceries">Groceries</a></li>
+          </ul>      
+        </div>
+        <div class="categoryBox">
+          <h4>Clothing</h4>
+          <ul id="categoryMenu">
+            <li><a href="#" id="tops">Tops</a></li>
+            <li><a href="#" id="womens-dresses">Womens dresses</a></li>
+            <li><a href="#" id="womens-shoes">Womens shoes</a></li>
+          </ul>      
+        </div>
+        <div class="categoryBox">
+          <h4>Accessories</h4>
+          <ul id="categoryMenu">
+            <li><a href="#" id="mens-watches">Mens watches</a></li>
+            <li><a href="#" id="womens-watches">Womens watches</a></li>
+            <li><a href="#" id="womens-bags">Womens bags</a></li>
+            <li><a href="#" id="womens-jewellery">Womens jewellery</a></li>
+            <li><a href="#" id="sunglasses">Sunglasses</a></li>
+          </ul>      
+        </div>
+        <div class="categoryBox">
+          <h4>Vehicles</h4>
+          <ul id="categoryMenu">
+            <li><a href="#" id="automotive">Automotive</a></li>
+            <li><a href="#" id="motorcycle">Motorcycle</a></li>
+          </ul>      
+        </div>
+      </nav>
+  </header>
+  <main>
+    <div id="productWrapper">
+      <h2>Products</h2>
+      <div class="searchAndFilter">
+        <section id="searchContainer">
+          <!-- <h3>Search product</h3> -->
+          <form id="searchForm">
+            <input type="text" placeholder="Search products" id="searchQuery" name="productsSearch">
+            <button type="submit" id="search-button">Search</button>
+          </form> 
+        </section>
+        <section id="filter">
+          <h4>Filter products</h4>
+          <form id="filterForm">
+            <select name="priceFilter" id="priceFilter">
+              <option value="" disabled selected>Filter by price</option>
+              <option value="max50">0-50$</option>
+              <option value="max100">0-100$</option>
+              <option value="max300">0-300$</option>
+
+            <select name="brandFilter" id="brandFilter">
+              <option value="" disabled selected>Filter by brand</option>
+              <option value="apple">Apple</option>
+              <option value="samsung">Samsung</option>
+              <option value="huawei">Infinix</option>
+              <option value="huawei">Huawei</option>
+              <option value="huawei">Microsoft Surface</option>
+              <option value="huawei">HP Pavilion</option>
+              <option value="huawei">Impression of Acqua Di Gio</option>
+              <option value="huawei">Impression of Acqua Di Gio</option>
+              <option value="huawei">Royal Mirage</option>
+              <option value="huawei">Fog Scent Xpressio</option>
+            <button type="submit" id="filter-button">Filter</button>
+          </form> 
+        </section>
+      </div>
+      <section id="productContainer">
+        <!-- Fetched products here -->
+
+      </section>
+
+    </div>
+  </main>
+</body>
+</html>

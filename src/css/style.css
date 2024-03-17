@@ -1,0 +1,361 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+/* --main-font:'Assistant', sans-serif; */
+/* --main-font:"Noto Sans", sans-serif; */
+--main-font:"Nunito", sans-serif;
+}
+
+html {
+font-size: 14px; 
+font-family: var(--main-font);
+}
+
+.hide{
+display: none;
+}
+
+#errorContainer, .warning{
+  color:#db2c11;
+  font-weight: 700;
+  text-align: right;
+  /* font-size: 1.5em; */
+}
+
+header{
+  text-align: center;
+  padding:1%;
+  /* border-bottom:1px solid #ccc; */
+  box-shadow: rgba(142, 142, 142, 0.2) 0px 2px 5px 0px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background: radial-gradient(circle, rgba(224,243,247,0.8113839285714286) 0%, rgba(206,246,255,0.8730085784313726) 100%);
+}
+
+h1, h2{
+  color:#033649;
+  margin-bottom:10px; 
+  text-align: center;
+}
+h1{
+  margin-top:10px;
+}
+/* h3{
+  text-align: left;
+} */
+p{
+  margin-bottom:10px;
+}
+
+a {
+  color: #098e71; 
+  text-decoration: none;
+}
+a:hover {
+  color: #4097ab;
+}
+
+#categoryMenu{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  /* gap: 2px 10px; */
+  font-size: 1em;
+  white-space: nowrap;
+  /* background-color: #066a55; */
+}
+
+#categoryMenu li {
+  color:#098e71; 
+  text-decoration: none;
+  margin-right:5px;
+}
+
+#categoryMenu li a {
+  color:#2c7174;
+}
+
+#categoryMenu li a:hover {
+  color:#4097ab;
+  text-decoration: underline;
+}
+
+#categoryBoxes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* width:99%; */
+  gap:1%;
+}
+.categoryBox{
+  padding: 7px;
+  max-width:125px;
+
+}
+.categoryBox ul{
+  display:block;
+}
+.categoryBox ul li a{
+  color:#098e71; 
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.categoryBoxli a:hover {
+  color: #066a55;
+  text-decoration: underline;
+}
+
+.categoryBox h4{
+  text-align: left;
+}
+
+/* .categoryBox{
+  background-color: #FFDEE9;
+  background: rgb(208,238,174);
+  background: radial-gradient(circle, rgba(208,238,174,0.6516981792717087) 0%, rgba(148,233,201,0.5984768907563025) 100%);
+  background: rgb(208,238,174);
+background: radial-gradient(circle, rgba(208,238,174,0.7349664826498423) 0%, rgba(208,238,174,1) 100%);
+  border:1px solid #ccc;
+  background: rgb(208,238,174);
+background: radial-gradient(circle, rgba(208,238,174,0.46367310725552047) 0%, rgba(208,238,174,1) 100%);
+  margin: 10px;
+} */
+
+
+
+
+img{
+  max-width: 100%;
+  /* min-width: 50%; */
+}
+
+
+/****** PRODUCTS ********/
+
+
+
+#productWrapper{
+  width:97%;
+  margin:15px auto 15px auto;
+  /* background-color:darkolivegreen; */
+}
+
+.searchAndFilter{
+  /* background-color:#efefef; */
+  padding:10px;
+  margin:0 auto;
+  /* width: 90%; */
+  display: flex;
+  justify-content: space-between;
+  /* justify-content: center; */
+  align-items: center;
+  gap:20%;
+  margin-bottom:2%;
+
+}
+
+form select, form button, form input {
+  padding:4px;
+  font-family: var(--main-font);
+}
+
+form button {
+  padding-right:15px;
+  padding-left:15px;
+}
+
+form input {
+  width:200px;
+  max-width:90%;
+}
+
+
+#filter{
+  /* margin:10px 0 10px 0; */
+  /* margin:1px 1% 10px 2.3%; */
+  /* margin:1px 20px 10px 25px; */
+  display: flex;
+  flex-wrap: wrap;
+  gap:10px;
+  align-items: center;
+  /* background-color: #329CA0; */
+}
+
+/* #filter h4{
+  width:100%;
+} */
+
+#filter select{
+  margin:0 10px 0 0;
+  gap:10px;
+}
+
+
+
+
+
+
+
+#productContainer{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* justify-content: space-between; */
+  gap:20px;
+}
+
+.productCard{
+  /* margin:10px; */
+  padding:20px;
+  /* background-color: #eeeeee; */
+  background-color: aliceblue;
+  background-color: #e0f3f7;
+  
+  /* min-width:30%; */
+  min-width:200px;
+  max-width:30%;
+  max-width:300px;
+  
+  /* max-width:300px; */
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+
+.productPrice{
+  font-weight: 600;
+  font-size: 1.2em;
+  color: #066a55;
+  color: #2bbe1d;
+  text-align: center;
+  border-top:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+  margin:25px 0 15px 0;
+}
+
+
+
+.productCard div:last-child{
+  display:flex;
+  align-self: flex-end;
+  flex-direction: column;
+}
+.productCard div:last-child p{
+  text-align: right;
+}
+
+
+.brand{
+  font-weight: 700;
+
+}
+.categoryHeader{
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom:20px;
+}
+
+.categoryTech .categoryHeader a{
+  color:darkslategrey;
+  /* content: f109; */
+}
+
+/* .categoryHeader a:before { */
+.categoryHeader:before {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block; 
+  text-rendering: auto;
+  font-variant: normal;
+  line-height: 1;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 1.2em;
+  margin:0 7px 0 5px;
+}
+
+.categoryTech .categoryHeader:before{
+  content: "\f109"; /*Laptop*/
+  content: "\f3ce"; /*Mobile*/
+}
+
+
+.categoryMobile .categoryHeader:before{
+  content: "\f3ce"; /*Mobile*/
+}
+
+.categoryLaptops .categoryHeader:before{
+  content: "\f109"; /*Laptop*/
+}
+
+.categorySkincare .categoryHeader:before{
+  content: "\f79c"; /*Presents*/
+}
+
+.categoryFragrances .categoryHeader:before{
+  content: "\e4c5"; /*Bottle*/
+}
+
+.categoryHome .categoryHeader:before{
+  content: "\f6c0"; /*chair*/
+}
+
+.categoryGroceries .categoryHeader:before{
+  content: "\f291"; /*groceries*/
+}
+
+.categoryClothing .categoryHeader:before{
+  content: "\f553"; /*T-shirt*/
+}
+
+.categoryAccessories .categoryHeader:before{
+  content: "\f70b"; /*Ring*/
+}
+
+.categoryVehicles .categoryHeader:before{
+  content: "\f21c"; /*Motorcycle*/
+}
+
+
+
+.buyButton{
+  padding:10px;
+  background-color: green;
+  color:white;
+  border-radius: 10px;
+  align-self: flex-end;
+}
+
+
+/* .categoryHeader:first-letter{
+  text-transform: capitalize;
+} */
+
+/* 
+.categoryTech{
+  background-color: #e0f3f7;
+}
+.categoryBeauty{
+  background-color:bisque;
+}
+.categoryGroceries{
+  background-color:lavender;
+}
+.categoryHome{
+  background-color:rgb(208, 248, 208);
+}
+.categoryClothing{
+  background-color:lightsteelblue;
+} */
