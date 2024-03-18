@@ -1,4 +1,4 @@
-##Dummy Webshop - Inlämning 3 - Javascript 2 
+## Dummy Webshop - Inlämning 3 - Javascript 2 
 
 #### Projekt på utbildningen:
 [Front end webbutvecklare](https://gritacademy.se/front-end-webbutvecklare/) 400 YH-poäng - [Grit Academy](https://gritacademy.se/)  
