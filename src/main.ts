@@ -1,4 +1,4 @@
-import { getProducts, getProductsFromSearch, getProductsFromCategory } from "./modules/fetchFunctions.js";
+import { getProducts, getProductsFromSearch, getProductsFromCategory, getProductsFilter } from "./modules/fetchFunctions.js";
 import{ displayProducts, clearPrevLists} from "./modules/display.ts"
 
 getProducts()
@@ -21,6 +21,7 @@ form.addEventListener('submit', (event) => {
 })
 
 
+
 const categoryMenu = document.querySelector('#categoryBoxes') as HTMLDivElement;
 
 categoryMenu.addEventListener('click', (event) => {
@@ -32,3 +33,21 @@ categoryMenu.addEventListener('click', (event) => {
   getProductsFromCategory(category)
     .then(displayProducts)
 })
+
+
+// const filterForm = document.querySelector('#filterForm') as HTMLFormElement;
+
+// filterForm.addEventListener('submit', (event) => {
+//   event.preventDefault();
+//   clearPrevLists();
+
+//   const priceFilterChoice:string = (document.querySelector('#priceFilter') as HTMLInputElement).value;
+//   const brandFilterChoice:string = (document.querySelector('#brandFilter') as HTMLInputElement).value;
+
+//   // getProductsFilter(priceFilterChoice, brandFilterChoice)
+//   getProductsFilter(priceFilterChoice)
+//     .then(displayProducts)
+
+
+//   form.reset();
+// })

@@ -255,10 +255,8 @@ form input {
   text-align: right;
 }
 
-
 .brand{
   font-weight: 700;
-
 }
 .categoryHeader{
   font-weight: 700;
@@ -267,9 +265,13 @@ form input {
   margin-bottom:20px;
 }
 
-.categoryTech .categoryHeader a{
-  color:darkslategrey;
-  /* content: f109; */
+.categoryHeader{
+  color:#2c7174;
+  cursor: pointer;
+}
+.categoryHeader:hover{
+  color:#4097ab;
+  text-decoration: underline;
 }
 
 /* .categoryHeader a:before { */
@@ -343,19 +345,5 @@ form input {
   text-transform: capitalize;
 } */
 
-/* 
-.categoryTech{
-  background-color: #e0f3f7;
-}
-.categoryBeauty{
-  background-color:bisque;
-}
-.categoryGroceries{
-  background-color:lavender;
-}
-.categoryHome{
-  background-color:rgb(208, 248, 208);
-}
-.categoryClothing{
-  background-color:lightsteelblue;
-} */
+
+

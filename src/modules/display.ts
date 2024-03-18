@@ -6,6 +6,7 @@ import {getProductsFromCategory} from "./fetchFunctions.js";
 
 const productsContainer = document.querySelector('#productContainer') as HTMLDivElement;
 
+
 /*********************************
   Display products
 **********************************/
@@ -15,13 +16,7 @@ export function displayProducts(products: ProductObject[]): void{
   for(const product of products){
     createProductCard(product, productsContainer);
   }
-
 }
-
-
-/*********************************
-  Create product Card
-**********************************/
 
 function createProductCard({id, title, thumbnail, description, price, stock, rating, brand, category, }: ProductObject, productsContainer: HTMLDivElement): void {
   const productCard = document.createElement('article');
@@ -38,11 +33,13 @@ function createProductCard({id, title, thumbnail, description, price, stock, rat
   const buyButton = document.createElement('button');
 
   productCard.classList.add('productCard');
+  productCard.setAttribute('id', id);
   productPrice.classList.add('productPrice');
   pBrand.classList.add('brand');
   pCategory.classList.add('categoryHeader');
   buyButton.classList.add('buyButton');
-  
+  pCategory.setAttribute('id', category);
+
   productTitle.innerText = title;
   productThumbnail.src = thumbnail;
   productDescription.innerText = description;
@@ -50,29 +47,21 @@ function createProductCard({id, title, thumbnail, description, price, stock, rat
   pBrand.innerText = brand;
   pCategory.innerText = category;
 
-  // pCategory.addEventListener('click', (event) => {
-  //   event.preventDefault();
+  pCategory.addEventListener('click', (event) => {
+    event.preventDefault();
+    clearPrevLists();
+    const category = ((event.target as HTMLInputElement).id);
 
-  //   console.log(event);
-  //   console.log(event.target);
-  //   console.log(event.currentTarget);
-    
-  //   // const category =((event.target as HTMLInputElement).id);
-  //   console.log('category i eventlistnern');
-  //   console.log(category);
+    getProductsFromCategory(category)
+    .then(displayProducts)
 
-  //   getProductsFromCategory(category)
-  //   .then(displayProducts)
-
-  // });
+  });
 
   productPrice.innerText = price + ' $';
-
   productStock.innerText = 'In stock: ' + stock;
   if (stock<10){
     productStock.classList.add('warning');
     productStock.innerText = `Warning only ${stock} left in stock!`;
-
   }
 
   buyButton.innerText = 'Buy product'
@@ -105,6 +94,28 @@ function createProductCard({id, title, thumbnail, description, price, stock, rat
   productsContainer.append(productCard);
 }
 
+
 export function clearPrevLists():void{
   productsContainer.innerHTML = '';
 }
+
+
+
+/*********************************
+  Single product
+**********************************/
+
+
+// const productCard = document.querySelector('.productCard') as HTMLDivElement;
+// productsContainer.addEventListener('click', (event) => {
+//   event.preventDefault();
+//   clearPrevLists();
+//   const productId = ((event.target as HTMLInputElement).id);
+//   console.log(productId);
+  
+//   getSingleProduct(productId)
+//   .then(displayProducts)
+
+// });
+
+

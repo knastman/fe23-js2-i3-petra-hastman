@@ -33,7 +33,28 @@ export async function getProductsFromSearch(searchQuery:string): Promise<Product
   GET products from category
 **********************************/
 
+export async function getProductsFilter(price:string): Promise<ProductObject[]>{
+  console.log('price and brand filter');
+  console.log(price);
+  // console.log(brand);
+  
+  // const url = `https://dummyjson.com/products/?limit=0&select=${brand},${price}`;
+  const url = `https://dummyjson.com/products/?limit=0&select=apple`;
+  console.log(url);
+
+  const res = await fetch(url);
+  const productsData = await res.json();
+
+  return productsData.products as ProductObject[];
+}
+
+/*********************************
+  GET products after filtering
+**********************************/
+
 export async function getProductsFromCategory(category:string): Promise<ProductObject[]>{
+  console.log(category);
+  
   const url = `https://dummyjson.com/products/category/${category}`;
   console.log(url);
 
@@ -45,24 +66,23 @@ export async function getProductsFromCategory(category:string): Promise<ProductO
 
 
 
-
-
 /*********************************
-  Product type
+  GET single product 
 **********************************/
 
-// type ProductObject = {
-//   id:number;
-//   title: string,
-//   description: string
-//   brand: string,
-//   price:number, 
-//   // rating:number,
-//   // stock:number,
-//   thumbnail: string,
-//   // category: string
-//   category: 'laptops' | 'smartphones' | 'skincare' | 'fragrances' | 'groceries' | 'home-decoration' | 'furniture' | 'tops' | 'womens-dresses' | 'womens-shoes'
-// }
+export async function getSingleProduct(productId:string): Promise<ProductObject[]>{
+  
+  const url = `https://dummyjson.com/products/${productId}`;
+  console.log(url);
+
+  const res = await fetch(url);
+  const productsData = await res.json();
+
+  return productsData.products as ProductObject[];
+}
+
+
+
 
 
 
