@@ -3,7 +3,7 @@
   Product type
 **********************************/
 export type ProductObject = {
-  id:string;
+  id:number;
   title: string,
   description: string
   brand: string,
