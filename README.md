@@ -1,4 +1,4 @@
-## Dummy Webshop - Inlämning 3 - Javascript 2 
+# Dummy Webshop - Inlämning 3 - Javascript 2 
 
 #### Projekt på utbildningen:
 [Front end webbutvecklare](https://gritacademy.se/front-end-webbutvecklare/) 400 YH-poäng - [Grit Academy](https://gritacademy.se/)  
@@ -9,7 +9,7 @@ FE23 | Javascript 2
 
 ---
 
-# Uppgiften
+## Uppgiften
 Du ska skapa en sida för att visa produkter i en webshop. Produkterna kommer från dummy json. Produkterna ska visas på ett sätt så att det ser ut som en riktig webshop, men den enda fungerande funktionaliteten som behövs är att en användare ska kunna söka på en viss produkt.
 
 ### Krav
