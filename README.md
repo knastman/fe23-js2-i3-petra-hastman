@@ -12,9 +12,9 @@ FE23 | Javascript 2
 # Uppgiften
 Du ska skapa en sida för att visa produkter i en webshop. Produkterna kommer från dummy json. Produkterna ska visas på ett sätt så att det ser ut som en riktig webshop, men den enda fungerande funktionaliteten som behövs är att en användare ska kunna söka på en viss produkt.
 
-## Krav
+### Krav
 
-### Innehåll och GUI
+#### Innehåll och GUI
 * Produkterna ska hämtas från dummyjson.com - https://dummyjson.com/docs/products 
 * En användare ska kunna söka på en produkt och se alla produkter som matchar i form av product cards.
 * Du väljer själv hur varje product card ska se ut men varje produkt ska visa minst
@@ -28,7 +28,7 @@ Du ska skapa en sida för att visa produkter i en webshop. Produkterna kommer fr
 
 Det är fritt fram att lägga till mer funktionalitet!
 
-### TypeScript
+#### TypeScript
 * Alla filer ska vara ts-filer
 * Lägg till en TS-typ till allting du inte tilldelat ett värde. (ex. const a = 3 blir automatiskt type number så du behöver inte ange det)
     * Variabler
@@ -37,6 +37,6 @@ Det är fritt fram att lägga till mer funktionalitet!
 * Type-casta till rätt typ där TypeScript inte kan räkna ut vilken typ som är rätt. 
 * Skapa type aliases för objekt där du vet att det kommer finnas flera objekt med exakt samma struktur.
 
-### Bundler
+#### Bundler
 * Använd Parcel
 
